@@ -1,0 +1,4 @@
+{"level":"DEBUG","time":"2023-08-20T15:24:15.647+0800","caller":"bblog/main.go:28","msg":"logger init success..."}
+{"level":"DEBUG","time":"2023-08-20T15:25:01.900+0800","caller":"bblog/main.go:28","msg":"logger init success..."}
+{"level":"INFO","time":"2023-08-20T15:27:42.924+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.3","errors":"","cost":0.000026853}
+{"level":"INFO","time":"2023-08-20T15:28:15.021+0800","caller":"logger/logger.go:71","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.32.3","errors":"","cost":0.000010962}
