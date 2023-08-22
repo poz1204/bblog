@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"bblog/controller"
 	"bblog/logger"
 	"net/http"
 
@@ -11,8 +12,16 @@ func Setup() *gin.Engine {
 	r := gin.New()
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
-	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "ok")
+	r.GET("/ping", func(c *gin.Context) {
+		c.String(http.StatusOK, "pong")
 	})
+
+	v1 := r.Group("/api/v1")
+
+	// 注册
+	v1.POST("/signup", controller.SignUpHandler)
+	// 登录
+	//v1.POST("/login", controller.LoginHandler)
+
 	return r
 }
