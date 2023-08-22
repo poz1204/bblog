@@ -7,6 +7,7 @@ import (
 	"errors"
 
 	"github.com/gin-gonic/gin"
+	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
 )
 
@@ -16,7 +17,14 @@ func SignUpHandler(c *gin.Context) {
 	if err := c.ShouldBindJSON(p); err != nil {
 		zap.L().Error("sign up with error parama", zap.Error(err))
 
-		// todo validator
+		// 判断err是不是validator.ValidationErrors 类型
+		errs, ok := err.(validator.ValidationErrors)
+		if !ok {
+			ResponseError(c, CodeInvalidParam)
+			return
+		}
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
+		return
 	}
 	//业务
 	if err := logic.SignUp(p); err != nil {

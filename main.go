@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bblog/controller"
 	"bblog/dao/mysql"
 	"bblog/dao/redis"
 	"bblog/logger"
+	"bblog/pkg/snowflake"
 	"bblog/routes"
 	"bblog/settings"
 	"fmt"
@@ -36,6 +38,17 @@ func main() {
 	// 4. 初始化Redis连接
 	if err := redis.Init(settings.Conf.RedisConfig); err != nil {
 		fmt.Printf("init redis failed, err:%v\n", err)
+		return
+	}
+	defer redis.Close()
+
+	// 初始化雪花算法 + 初始化gin框架内置的校验器使用的翻译器
+	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
+		fmt.Printf("init snowflake failed, err:%v\n", err)
+		return
+	}
+	if err := controller.InitTrans("zh"); err != nil {
+		fmt.Printf("init validator trans failed, err:%v\n", err)
 		return
 	}
 
