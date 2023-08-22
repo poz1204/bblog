@@ -18,10 +18,9 @@ func Setup() *gin.Engine {
 
 	v1 := r.Group("/api/v1")
 
-	// 注册
+	// 注册 登陆
 	v1.POST("/signup", controller.SignUpHandler)
-	// 登录
-	//v1.POST("/login", controller.LoginHandler)
+	v1.POST("/login", controller.LoginHandler)
 
 	return r
 }

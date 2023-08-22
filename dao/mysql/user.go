@@ -40,3 +40,18 @@ func encryptPassword(oPassword string) string {
 	h.Write([]byte(secret))
 	return hex.EncodeToString(h.Sum([]byte(oPassword)))
 }
+
+func Login(user *models.User) (err error) {
+	thisPass := user.Password
+	mysqlUser := models.User{}
+	result := db.Table("user").First(&mysqlUser)
+	if result.RowsAffected == 0 {
+		return ErrorUserNotExist
+	}
+	password := mysqlUser.Password
+	if password != thisPass {
+		return ErrorInvalidPassword
+	}
+
+	return
+}

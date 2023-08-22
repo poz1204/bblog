@@ -1,0 +1,62 @@
+Date : 2023-08-22 22:08:47
+Directory : /home/robben/go/src/bblog
+Total : 20 files,  1293 codes, 51 comments, 136 blanks, all 1480 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| Go               |         16 |        608 |         51 |        130 |        789 |
+| Go Checksum File |          1 |        599 |          0 |          1 |        600 |
+| Go Module File   |          1 |         58 |          0 |          5 |         63 |
+| YAML             |          1 |         26 |          0 |          0 |         26 |
+| Markdown         |          1 |          2 |          0 |          0 |          2 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                 | files      | code       | comment    | blank      | total      |
++------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                    |         20 |      1,293 |         51 |        136 |      1,480 |
+| . (Files)                                            |          4 |        706 |          7 |         15 |        728 |
+| conf                                                 |          1 |         26 |          0 |          0 |         26 |
+| controller                                           |          4 |        180 |         19 |         38 |        237 |
+| dao                                                  |          3 |         90 |          4 |         22 |        116 |
+| dao/mysql                                            |          2 |         63 |          3 |         15 |         81 |
+| dao/redis                                            |          1 |         27 |          1 |          7 |         35 |
+| logger                                               |          1 |        110 |          7 |         13 |        130 |
+| logic                                                |          1 |         34 |          1 |          7 |         42 |
+| models                                               |          2 |         13 |          1 |          5 |         19 |
+| pkg                                                  |          2 |         58 |         10 |         13 |         81 |
+| pkg/jwt                                              |          1 |         39 |         10 |          8 |         57 |
+| pkg/snowflake                                        |          1 |         19 |          0 |          5 |         24 |
+| routes                                               |          1 |         18 |          1 |          8 |         27 |
+| settings                                             |          1 |         58 |          1 |         15 |         74 |
++------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                             | language         | code       | comment    | blank      | total      |
++------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/robben/go/src/bblog/README.md                  | Markdown         |          2 |          0 |          0 |          2 |
+| /home/robben/go/src/bblog/conf/config.yaml           | YAML             |         26 |          0 |          0 |         26 |
+| /home/robben/go/src/bblog/controller/code.go         | Go               |         29 |          0 |          7 |         36 |
+| /home/robben/go/src/bblog/controller/response.go     | Go               |         31 |          0 |          7 |         38 |
+| /home/robben/go/src/bblog/controller/user.go         | Go               |         62 |          5 |         10 |         77 |
+| /home/robben/go/src/bblog/controller/validator.go    | Go               |         58 |         14 |         14 |         86 |
+| /home/robben/go/src/bblog/dao/mysql/mysql.go         | Go               |         16 |          2 |          5 |         23 |
+| /home/robben/go/src/bblog/dao/mysql/user.go          | Go               |         47 |          1 |         10 |         58 |
+| /home/robben/go/src/bblog/dao/redis/redis.go         | Go               |         27 |          1 |          7 |         35 |
+| /home/robben/go/src/bblog/go.mod                     | Go Module File   |         58 |          0 |          5 |         63 |
+| /home/robben/go/src/bblog/go.sum                     | Go Checksum File |        599 |          0 |          1 |        600 |
+| /home/robben/go/src/bblog/logger/logger.go           | Go               |        110 |          7 |         13 |        130 |
+| /home/robben/go/src/bblog/logic/user.go              | Go               |         34 |          1 |          7 |         42 |
+| /home/robben/go/src/bblog/main.go                    | Go               |         47 |          7 |          9 |         63 |
+| /home/robben/go/src/bblog/models/params.go           | Go               |          6 |          0 |          2 |          8 |
+| /home/robben/go/src/bblog/models/user.go             | Go               |          7 |          1 |          3 |         11 |
+| /home/robben/go/src/bblog/pkg/jwt/jwt.go             | Go               |         39 |         10 |          8 |         57 |
+| /home/robben/go/src/bblog/pkg/snowflake/snowflake.go | Go               |         19 |          0 |          5 |         24 |
+| /home/robben/go/src/bblog/routes/routers.go          | Go               |         18 |          1 |          8 |         27 |
+| /home/robben/go/src/bblog/settings/settings.go       | Go               |         58 |          1 |         15 |         74 |
+| Total                                                |                  |      1,293 |         51 |        136 |      1,480 |
++------------------------------------------------------+------------------+------------+------------+------------+------------+

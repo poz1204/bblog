@@ -1,0 +1,22 @@
+"filename", "language", "Go", "YAML", "Go Checksum File", "Go Module File", "Markdown", "comment", "blank", "total"
+"/home/robben/go/src/bblog/README.md", "Markdown", 0, 0, 0, 0, 2, 0, 0, 2
+"/home/robben/go/src/bblog/conf/config.yaml", "YAML", 0, 26, 0, 0, 0, 0, 0, 26
+"/home/robben/go/src/bblog/controller/code.go", "Go", 29, 0, 0, 0, 0, 0, 7, 36
+"/home/robben/go/src/bblog/controller/response.go", "Go", 31, 0, 0, 0, 0, 0, 7, 38
+"/home/robben/go/src/bblog/controller/user.go", "Go", 62, 0, 0, 0, 0, 5, 10, 77
+"/home/robben/go/src/bblog/controller/validator.go", "Go", 58, 0, 0, 0, 0, 14, 14, 86
+"/home/robben/go/src/bblog/dao/mysql/mysql.go", "Go", 16, 0, 0, 0, 0, 2, 5, 23
+"/home/robben/go/src/bblog/dao/mysql/user.go", "Go", 47, 0, 0, 0, 0, 1, 10, 58
+"/home/robben/go/src/bblog/dao/redis/redis.go", "Go", 27, 0, 0, 0, 0, 1, 7, 35
+"/home/robben/go/src/bblog/go.mod", "Go Module File", 0, 0, 0, 58, 0, 0, 5, 63
+"/home/robben/go/src/bblog/go.sum", "Go Checksum File", 0, 0, 599, 0, 0, 0, 1, 600
+"/home/robben/go/src/bblog/logger/logger.go", "Go", 110, 0, 0, 0, 0, 7, 13, 130
+"/home/robben/go/src/bblog/logic/user.go", "Go", 34, 0, 0, 0, 0, 1, 7, 42
+"/home/robben/go/src/bblog/main.go", "Go", 47, 0, 0, 0, 0, 7, 9, 63
+"/home/robben/go/src/bblog/models/params.go", "Go", 6, 0, 0, 0, 0, 0, 2, 8
+"/home/robben/go/src/bblog/models/user.go", "Go", 7, 0, 0, 0, 0, 1, 3, 11
+"/home/robben/go/src/bblog/pkg/jwt/jwt.go", "Go", 39, 0, 0, 0, 0, 10, 8, 57
+"/home/robben/go/src/bblog/pkg/snowflake/snowflake.go", "Go", 19, 0, 0, 0, 0, 0, 5, 24
+"/home/robben/go/src/bblog/routes/routers.go", "Go", 18, 0, 0, 0, 0, 1, 8, 27
+"/home/robben/go/src/bblog/settings/settings.go", "Go", 58, 0, 0, 0, 0, 1, 15, 74
+"Total", "-", 608, 26, 599, 58, 2, 51, 136, 1480
