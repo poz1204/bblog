@@ -44,6 +44,7 @@ func encryptPassword(oPassword string) string {
 func Login(user *models.User) (err error) {
 	thisPass := user.Password
 	mysqlUser := models.User{}
+
 	result := db.Table("user").First(&mysqlUser)
 	if result.RowsAffected == 0 {
 		return ErrorUserNotExist

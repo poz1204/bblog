@@ -13,7 +13,7 @@ import (
 )
 
 func SignUpHandler(c *gin.Context) {
-	//获取参数和校验
+	// 获取参数和校验
 	p := new(models.ParamSignUp)
 	if err := c.ShouldBindJSON(p); err != nil {
 		zap.L().Error("sign up with error parama", zap.Error(err))
@@ -27,7 +27,7 @@ func SignUpHandler(c *gin.Context) {
 		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 		return
 	}
-	//业务
+	// 业务
 	if err := logic.SignUp(p); err != nil {
 		zap.L().Error("logic.SignUp failed", zap.Error(err))
 		if errors.Is(err, mysql.ErrorUserExist) {
@@ -38,7 +38,7 @@ func SignUpHandler(c *gin.Context) {
 		return
 	}
 
-	//返回
+	// 返回
 	ResponseSuccess(c, nil)
 }
 
