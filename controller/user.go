@@ -43,7 +43,7 @@ func SignUpHandler(c *gin.Context) {
 }
 
 func LoginHandler(c *gin.Context) {
-	p := new(models.ParamSignUp)
+	p := new(models.ParamLogin)
 	if err := c.ShouldBindJSON(p); err != nil {
 		zap.L().Error("sign up with error parama", zap.Error(err))
 

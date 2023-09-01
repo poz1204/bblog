@@ -4,16 +4,9 @@ import (
 	"bblog/models"
 	"crypto/md5"
 	"encoding/hex"
-	"errors"
 )
 
 const secret = "thisisbblog"
-
-var (
-	ErrorUserExist       = errors.New("用户已存在")
-	ErrorUserNotExist    = errors.New("用户不存在")
-	ErrorInvalidPassword = errors.New("用户名或密码错误")
-)
 
 func CheckUserExist(username string) (err error) {
 	var count int64
@@ -55,4 +48,10 @@ func Login(user *models.User) (err error) {
 	}
 
 	return
+}
+
+func GetUserById(uid int64) (user *models.User, err error) {
+	user = new(models.User)
+	result := db.Table("user").Where("user_id = ?", uid).First(&user)
+	return user, result.Error
 }
